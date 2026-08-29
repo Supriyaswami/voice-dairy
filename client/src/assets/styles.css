@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-screen bg-stone-50 text-stone-900 font-body antialiased transition-colors duration-300;
+  background-image:
+    radial-gradient(circle at top left, rgba(239, 219, 199, 0.9), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(204, 169, 136, 0.38), transparent 22%),
+    linear-gradient(180deg, #fbf7f1 0%, #f2e9de 100%);
+}
+
+.dark body {
+  @apply bg-surface-night text-stone-100;
+  background-image:
+    radial-gradient(circle at top left, rgba(103, 70, 43, 0.22), transparent 20%),
+    radial-gradient(circle at bottom right, rgba(189, 126, 82, 0.14), transparent 26%),
+    linear-gradient(180deg, #121110 0%, #1b1816 100%);
+}
+
+#root {
+  @apply min-h-screen;
+}
+
+.paper-lines {
+  background-size: 100% 32px, 24px 24px;
+  background-position: 0 10px, 52px 0;
+}
+
+.glass-panel {
+  @apply border border-white/40 bg-white/70 shadow-velvet backdrop-blur-xl dark:border-white/10 dark:bg-white/5;
+}
+
+.nav-link-active {
+  @apply bg-stone-900 text-white dark:bg-white dark:text-stone-900;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
